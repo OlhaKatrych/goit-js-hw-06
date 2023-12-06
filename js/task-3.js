@@ -1,33 +1,25 @@
 class StringBuilder {
-    #value;
+  #value;
 
-    constructor(initialValue){
-        this.#value = initialValue;
-    }
+  constructor(initialValue) {
+    this.#value = initialValue;
+  }
 
-    getValue(){
-        return this.#value;
-    }
+  getValue() {
+    return this.#value;
+  }
 
-    padEnd(str){
-       
+  padEnd(str) {
     this.#value = this.#value.padEnd(3, str);
-        
-        
-    }
-    padStart(str){
-
+  }
+  padStart(str) {
     this.#value = this.#value.padStart(2, str);
+  }
 
-       
-    }
-
-    padBoth(str){
-        
-        this.#value = this.#value.padStart(4, str);
-        this.#value = this.#value.padEnd(5, str);
-    }
-
+  padBoth(str) {
+    this.#value = this.#value.padStart(4, str);
+    this.#value = this.#value.padEnd(5, str);
+  }
 }
 
 const builder = new StringBuilder(".");
