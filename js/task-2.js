@@ -7,11 +7,11 @@ class Storage {
     return this.#items;
   }
   addItem(newItem) {
-    return this.#items.push(newItem);
+    this.#items.push(newItem);
   }
   removeItem(itemToRemove) {
     const res = this.#items.indexOf(itemToRemove);
-    return this.#items.splice(1, res);
+    return this.#items.splice(res, 1);
   }
 }
 

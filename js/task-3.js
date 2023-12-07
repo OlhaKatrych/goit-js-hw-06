@@ -10,15 +10,15 @@ class StringBuilder {
   }
 
   padEnd(str) {
-    this.#value = this.#value.padEnd(3, str);
+    this.#value = this.#value + str;
   }
   padStart(str) {
-    this.#value = this.#value.padStart(2, str);
+    this.#value = str + this.#value;
   }
 
   padBoth(str) {
-    this.#value = this.#value.padStart(4, str);
-    this.#value = this.#value.padEnd(5, str);
+    this.#value = str + this.#value + str;
+    
   }
 }
 
